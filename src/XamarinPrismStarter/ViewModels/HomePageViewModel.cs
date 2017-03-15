@@ -1,4 +1,5 @@
 ﻿using System;
+using Prism.Commands;
 using Prism.Navigation;
 
 namespace XamarinPrismStarter.ViewModels
@@ -18,10 +19,21 @@ namespace XamarinPrismStarter.ViewModels
 			}
 		}
 
-		public HomePageViewModel()
+		public DelegateCommand ExecuteCommand { get; set; }
+
+		private readonly INavigationService _navigationService;
+		public HomePageViewModel(INavigationService navigationService)
 		{
+			_navigationService = navigationService;
+
 			this.Texto = "Xamarin Forms with Prism";
-			//this.Title = "Home";
+
+			this.ExecuteCommand = new DelegateCommand(Execute, () => true);
+		}
+
+		private void Execute()
+		{
+			_navigationService.NavigateAsync("Page1");
 		}
 
 		public void OnNavigatedFrom(NavigationParameters parameters)

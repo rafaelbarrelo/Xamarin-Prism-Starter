@@ -20,6 +20,7 @@ namespace XamarinPrismStarter
 			Container.RegisterTypeForNavigation<MasterDetailHomePage>();
 			Container.RegisterTypeForNavigation<NavigationPage>();
 			Container.RegisterTypeForNavigation<HomePage>();
+			Container.RegisterTypeForNavigation<Page1>();
 		}
 
 		protected override void OnStart()

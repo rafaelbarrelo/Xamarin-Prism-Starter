@@ -37,11 +37,13 @@ namespace XamarinPrismStarter.ViewModels
 			{
 				this.Menu.Add(new MenuItem { Text = $"Menu Item {i}", ViewDestination = "HomePage", Parameters = $"{i}" });
 			}
+			this.Menu.Add(new MenuItem { Text = $"Pagina 1", ViewDestination = "Page1", Parameters = "" });
 		}
 
 		void SelectedItem(MenuItem item)
 		{
 			this._navigationService.NavigateAsync($"NavigationPage/{item.ViewDestination}?id={item.Parameters}");
+			//this._navigationService.NavigateAsync($"{item.ViewDestination}?id={item.Parameters}");
 		}
 	}
 

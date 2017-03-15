@@ -4,12 +4,69 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
+	xmlns:page="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
 	x:Class="XamarinPrismStarter.Views.Page1"
 	Title="{Binding Title}"
 	>
 	<ContentPage.Content>
-		<StackLayout Margin="50">
-			<Label Text="{Binding Text}"></Label>
-		</StackLayout>
+		<ScrollView Padding="8">
+			<StackLayout>
+				<page:HeroImage 
+					ImageSource="https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg"
+					Text="Batman"
+					Detail="HeroImage Control"
+				/>
+
+				<page:ListItemControl
+					ImageSource="https://i.stack.imgur.com/dZ2qU.jpg"
+					Title="Joker"
+					Detail="ListItemControl Control"
+				/>
+
+				<page:ListItemControl
+					ImageSource="https://s-media-cache-ak0.pinimg.com/736x/70/93/75/70937558cca11ee46b4f7ceb711a330b.jpg"
+					Title="Poison Ivy"
+					Detail="ListItemControl Control"
+				/>
+				
+				<page:ListItemControl
+					ImageSource="https://s-media-cache-ak0.pinimg.com/736x/0b/87/a4/0b87a4241cbc977743da8d4cd99123f3.jpg"
+					Title="Scarecrow"
+					Detail="ListItemControl Control"
+				/>
+
+				<page:ListItemControl
+					ImageSource="http://digital64.com/wp-content/uploads/2016/03/riddle.jpg"
+					Title="Riddler"
+					Detail="ListItemControl Control"
+				/>
+
+				<page:ListItemControl
+					ImageSource="http://vignette3.wikia.nocookie.net/batman/images/e/e7/TDKRCatwoman.jpg/revision/latest?cb=20120524143750"
+					Title="Catwoman"
+					Detail="ListItemControl Control"
+				/>
+
+				<page:CardView
+					ImageSource="http://vignette1.wikia.nocookie.net/newdcmovieuniverse/images/c/ce/Gcskyline.png/revision/latest?cb=20160223181953"
+					Text="Gotham City"
+					Detail="CardView Control"
+				/>
+
+				<page:CardView
+					ImageSource="http://vignette1.wikia.nocookie.net/batman/images/2/2e/800px-Hush_Villains.jpg/revision/latest?cb=20080601014856"
+					Text="Batman Villains"
+					Detail="CardView Control"
+				/>
+
+				<page:CardView
+					ImageSource="http://vignette4.wikia.nocookie.net/marvel_dc/images/b/b0/Batman_Family_0004.jpg/revision/latest?cb=20150314150818"
+					Text="Batman Family"
+					Detail="CardView Control"
+				/>
+
+				
+			</StackLayout>
+		</ScrollView>
 	</ContentPage.Content>
 </ContentPage>

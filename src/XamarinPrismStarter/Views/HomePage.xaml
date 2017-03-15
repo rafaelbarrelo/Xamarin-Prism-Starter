@@ -10,7 +10,7 @@
 	<ContentPage.Content>
 		<StackLayout Padding="50">
 			<Label Text="{Binding Texto}" />
-			<Button Text="Pagina 1" Command="{Binding ExecuteCommand}" />
+			<Button Text="Batman" Command="{Binding ExecuteCommand}" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

@@ -26,6 +26,7 @@ namespace XamarinPrismStarter.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::ModernHttpClient.Resource.String.library_name = global::XamarinPrismStarter.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::XamarinPrismStarter.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -3580,6 +3581,12 @@ namespace XamarinPrismStarter.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f07003e
+			public const int ApplicationName = 2131165246;
+			
+			// aapt resource value: 0x7f07003d
+			public const int Hello = 2131165245;
+			
 			// aapt resource value: 0x7f07001c
 			public const int abc_action_bar_home_description = 2131165212;
 			
@@ -3681,6 +3688,9 @@ namespace XamarinPrismStarter.Droid
 			
 			// aapt resource value: 0x7f070016
 			public const int character_counter_pattern = 2131165206;
+			
+			// aapt resource value: 0x7f07003f
+			public const int library_name = 2131165247;
 			
 			// aapt resource value: 0x7f070000
 			public const int mr_button_content_description = 2131165184;

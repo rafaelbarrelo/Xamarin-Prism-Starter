@@ -22,7 +22,7 @@ namespace XamarinPrismStarter.ViewModels
 		public Page1ViewModel()
 		{
 			this.Text = "Pagina 1";
-			this.Title = "Pagina 1 Title";
+			this.Title = "Xamarin Controls - Batman";
 		}
 	}
 }

@@ -39,6 +39,7 @@ namespace XamarinPrismStarter.ViewModels
 			}
 			this.Menu.Add(new MenuItem { Text = $"Batman", ViewDestination = "Page1", Parameters = "" });
 			this.Menu.Add(new MenuItem { Text = $"Xamarin Data Page", ViewDestination = "XamarinDataPage", Parameters = "" });
+			this.Menu.Add(new MenuItem { Text = $"Feed", ViewDestination = "FeedPage", Parameters = "" });
 		}
 
 		void SelectedItem(MenuItem item)

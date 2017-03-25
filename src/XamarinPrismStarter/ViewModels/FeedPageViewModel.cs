@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamarinPrismStarter.Models;
 
@@ -12,6 +13,13 @@ namespace XamarinPrismStarter.ViewModels
 		{
 			get { return this._feedItem; }
 			set { SetProperty(ref _feedItem, value); }
+		}
+
+		private bool _loading;
+		public bool Loading
+		{
+			get { return this._loading; }
+			set { SetProperty(ref this._loading, value); }
 		}
 
 		public FeedPageViewModel()
@@ -35,9 +43,15 @@ namespace XamarinPrismStarter.ViewModels
 				{
 					FeedItem.Add(item);
 				}
+				this.Loading = false;
 			});
 
-			RssParser.GetFeeds(feedList);
+			Task.Factory.StartNew(async () =>
+			{
+				this.Loading = true;
+				await Task.Delay(5 * 1000);
+				await RssParser.GetFeeds(feedList);
+			});
 		}
 	}
 }

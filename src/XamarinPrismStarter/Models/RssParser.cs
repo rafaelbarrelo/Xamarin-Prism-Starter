@@ -44,7 +44,7 @@ namespace XamarinPrismStarter.Models
 												 Title = u.Element("title").Value,
 												 Description = u.Element("description").Value,
 												 Link = new Uri(u.Element("link").Value),
-									ImageUrl = u.Element(media + "content").Attribute("url").Value,
+									//ImageUrl = u.Element(media + "content").Attribute("url").Value,
 												 PubDate = TryDateTime(u.Element("pubDate").Value)
 
 											 }).ToList());

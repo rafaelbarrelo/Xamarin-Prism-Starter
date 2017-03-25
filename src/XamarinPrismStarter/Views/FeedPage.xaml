@@ -7,7 +7,7 @@
 	x:Class="XamarinPrismStarter.Views.FeedPage">
 	<ContentPage.Content>
 		<StackLayout>
-			
+			<ActivityIndicator IsRunning="{Binding Loading}" IsVisible="{Binding Loading}" />
 			<ListView ItemsSource="{Binding FeedItem}">
 				<ListView.ItemTemplate>
 					<DataTemplate>
